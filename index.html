@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Luis Suárez</title>
+    <link rel="stylesheet" href="stil.css">
+    <script src="https://kit.fontawesome.com/3c4d1e9b35.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Professional  football player</p>
+                <h1>Luis <span>Suárez</span><br>from Uruguay</h1>
+            </div>
+        </div>
+    </div>
+<!--about-->
+<div id="about">
+    <div class="containter">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Luis</h1>
+                <p>Luis Alberto Suárez Díaz ( born 25 January 1987) is a professional footballer who plays as a striker for the Uruguay national team. 
+                    Nickname: El Pistolero ('The Gunman'). Suárez is regarded as one of the best players of his generation and one of the greatest strikers of all time. 
+                    Suárez has won two European Golden Shoes, an Eredivisie Golden Boot, a Premier League Golden Boot, and the Pichichi Trophy. 
+                    He has scored over 500 career goals for club and country.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')"><b>Skills</b></p>
+                    <p class="tab-links" onclick="opentab('National-team')"><b>National-team</b></p>
+                    <p class="tab-links" onclick="opentab('Clubs')"><b>Clubs</b></p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>passing</span></li>
+                        <li><span>finishing</span></li> 
+                        <li><span>comfort with the ball</span></li>                          
+                    </ul>
+                </div>
+                <div class="tab-contents" id="National-team">
+                    <ul>
+                        <li><span>Suárez was invited to play qualifying rounds for the 2007 U-20 World Cup</span></li>
+                        <li><span>Senior debut for Uruguay on 8 February 2007 in a 3:1 win against Colombia</span></li> 
+                        <li><span>He was sent off in the 85th minute after receiving a second yellow card for dissent</span></li>                          
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Clubs">
+                    <ul>
+                        <li><span>2005 to 2006 Nacional (Uruguay)</span></li>
+                        <li><span>2006 to 2007 Groningen (Holland)</span></li> 
+                        <li><span>2007 to 2011 Ajax (Holland)</span></li>
+                        <li><span>2011 to 2014 Liverpool (England)</span></li> 
+                        <li><span>2014 to 2020 FC Barcelona (Spain)</span></li>  
+                        <li><span>2020 to 2022 Atlético Madrid (Spain)</span></li>  
+                        <li><span>2022 to present Nacional (Uruguay)</span></li>                       
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--goals-->
+<div id="goals">
+    <div class="container">
+        <h1 class="sub-title">Best goals</h1>
+        <div class="goals-list">
+            <div>
+                <i class="fa-solid fa-volleyball"></i>
+                <h2>Goal vs Norwich</h2>
+                <p>Simply beautiful goal - volley!</p>
+                <a href="https://www.youtube.com/watch?v=fPbm5bRY-vI">Link</a>
+            </div>
+            <div>
+                <i class="fa-sharp fa-regular fa-futbol"></i>
+                <h2>Goal vs Mallorca</h2>
+                <p>Backheel goal!</p>
+                <a href="https://www.youtube.com/watch?v=HRAI0Rmhxks">Link</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-scissors"></i>
+                <h2>Goal vs Arsenal</h2>
+                <p>Outrageous bicycle kick!</p>
+                <a href="https://www.youtube.com/watch?v=ysjLECfPHWI">Link</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact</h1>
+                <p><i class="fas fa-paper-plane"></i>luis.suarez@example.com</p>
+                <p><i class="fas fa-phone-volume"></i>xxx xxx-xxxx</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/LuisSuarez9"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/LuisSuarez9"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/luissuarez9/?hl=hr"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Luis</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+
+</body>
+</html>
